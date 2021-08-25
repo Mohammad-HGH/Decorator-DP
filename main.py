@@ -1,7 +1,5 @@
 from Project import *
 
-
-
 if __name__ == '__main__':
     simple = ConcreteComponent()
     print("Client: I've got a simple component:")
@@ -13,4 +11,3 @@ if __name__ == '__main__':
     decorator3 = ConcreteDecoratorC(decorator2)
     print("Client: Now I've got a decorated component:")
     client_code(decorator3)
-

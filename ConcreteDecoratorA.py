@@ -1,5 +1,4 @@
-
-
+from Project import Decorator
 
 
 class ConcreteDecoratorA(Decorator):

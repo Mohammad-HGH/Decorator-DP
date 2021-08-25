@@ -1,4 +1,4 @@
-class Component():
+class Component:
     def operation(self) -> str:
         pass
 
@@ -15,7 +15,7 @@ class Decorator(Component):
         self._component = component
 
     @property
-    def component(self) -> str:
+    def component(self) -> Component:
         return self._component
 
     def operation(self) -> str:
@@ -28,15 +28,14 @@ class ConcreteDecoratorA(Decorator):
 
 
 class ConcreteDecoratorB(Decorator):
-   def operation(self) -> str:
+    def operation(self) -> str:
         return f"ConcreteDecoratorB({self.component.operation()})"
 
+
 class ConcreteDecoratorC(Decorator):
-   def operation(self) -> str:
+    def operation(self) -> str:
         return f"ConcreteDecoratorC({self.component.operation()})"
 
 
 def client_code(component: Component) -> None:
-   print(f"RESULT: {component.operation()}", end="")
-
-
+    print(f"RESULT: {component.operation()}", end="")
